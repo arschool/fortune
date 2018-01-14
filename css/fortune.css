@@ -1,0 +1,165 @@
+/* おみくじアプリのスタイル */
+
+/* PCでもスマホの幅で表示 */
+@media (min-width:480px) {
+  .main{
+    max-width: 480px;
+    min-height: 600px;
+    border-radius: 8px;
+    /* box-shadow */
+    box-shadow:0px 0px 10px 0px #d9d9d9;
+    margin: 0;
+  }
+}
+
+/* メイン画面のレイアウト */
+.main {
+  display: grid;
+  grid-template-rows: 20px 1fr 3fr 1fr 1fr 1fr 1fr 20px;
+  grid-template-columns: 3px 1fr 3px;
+  background-color: #f5deb3;
+  border: solid 1.5px black;
+}
+
+/* タイトル */
+.title {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+/* 説明パネル */
+.instruction {
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+/* step1へのボタン */
+.sample-01-btn {
+  grid-row: 4 / 5;
+  grid-column: 2 / 3; 
+}
+
+/* step2へのボタン */
+.sample-02-btn {
+  grid-row: 5 / 6;
+  grid-column: 2 / 3;
+}
+
+/* step3へのボタン */
+.sample-03-btn {
+  grid-row: 6 / 7;
+  grid-column: 2 / 3;
+}
+
+/* workへのボタン */
+.work-btn {
+  grid-row: 7 / 8;
+  grid-column: 2 / 3;
+}
+
+/* クリックできるボタン */
+.btn {
+  border: solid 1.5px black;
+  border-radius: 10px;
+  text-decoration: none;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+}
+
+/* ベージュのボタンの背景 */
+.btn-beige {
+  background-color: #fff8dc;
+}
+
+/* ベージュのボタンマウスオーバー時の背景 */
+.btn-beige:hover {
+  background-color: #eee8aa;
+}
+
+/* 赤いボタンの背景 */
+.btn-red {
+  background-color: #ff0000;
+}
+
+/* 赤いボタンマウスオーバー時の背景 */
+.btn-red:hover {
+  background-color: #ff4500;
+}
+
+/* ボタン中のテキストを縦横中央に設置 */
+.btn>p {
+  flex: 0 1 100%;
+  padding: 0px;
+  margin: 0px;
+  color: black;
+}
+
+/* ボタン中のヘッダ２を縦横中央に設置 */
+.btn>h2 {
+  flex: 0 1 100%;
+  padding: 0px;
+  margin: 0px;
+  color: black;
+}
+
+/* 結果等を表示する枠 */
+.panel {
+  background-color: #fff8dc;
+  border: solid 1.5px black;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* 枠中のヘッダ２を縦横中央に設定 */
+.panel>h2 {
+  flex: 0 1 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+/* 指定したオブジェクトを隠す */
+.hidden-object {
+  visibility: hidden;
+}
+
+/* トップ表示するおみくじの画像を配置 */
+.omikuji-image {
+  grid-row: 3 / 5;
+  grid-column: 2 / 3;
+  display: flex;
+  text-align: center;
+  align-items: center;
+}
+
+/* トップ表示のおみくじ画像の幅調整と配置 */
+.omikuji-image>.image {
+  flex: 0 1 auto;
+  padding: 0px;
+  margin: auto;
+  max-height: 300px;
+}
+
+/* 結果のパネルを配置 */
+.kekka-panel {
+  grid-row: 3 / 6;
+  grid-column: 2 / 3;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 画面最下部におみくじを引く/戻るボタンを設置 */
+.low-btn {
+  grid-row: 7 / 8;
+  grid-column: 2 / 3;
+}
+
