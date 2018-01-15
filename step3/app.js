@@ -62,7 +62,7 @@ let miseruRoulette = () => {
 
 // おみくじの結果を見せる
 let miseruOmikujiKekka = () => {
-  // 始めの画面のおみくじ画像を隠す
+  // ルーレットに使っていた画像を隠す
   kakusuPanel(omikujiImage);
 
   // タイトル画面のおみくじ画像を設定する
@@ -97,7 +97,7 @@ let hikuOmikuji = () => {
   // 「おみくじを引く」ボタンを隠す
   kakusuPanel(hikuButton);
 
-  // 0.5秒で画像を変えるルーレットのアニメーションを開始する
+  // 0.1秒で画像を変えるルーレットのアニメーションを開始する
   let rouletteTimer = kurikaesuTimer(miseruRoulette,100);
 
   // 3秒待って結果を表示する
