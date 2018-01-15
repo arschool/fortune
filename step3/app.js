@@ -51,8 +51,8 @@ let omikujiRoulette = [
   '02_kichi_take.png',
   '03_shokichi_ume.png',
   '04_kyo_koma.png',
-  '05_daikyo_hagoita.png',
-]
+  '05_daikyo_hagoita.png'
+];
 
 // ルーレットを表示する関数
 let miseruRoulette = () => {
