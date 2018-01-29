@@ -157,6 +157,11 @@
   align-items: center;
 }
 
+/* 結果画像を150px 以内に落とし込む*/
+.kekka-image {
+  max-height:150px;
+}
+
 /* 画面最下部におみくじを引く/戻るボタンを設置 */
 .low-btn {
   grid-row: 7 / 8;
