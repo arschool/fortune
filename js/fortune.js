@@ -109,3 +109,37 @@ const setteiHomeImage = (image) => {
   // タイトル画面の画像を設定
   omikujiImage.src = `img/${image}`;
 }
+
+
+//ルーレット画像のDOM
+let rouletteImages = [];
+
+//ルーレット画像を隠す
+const kakusuRoulette = () => {
+	for(let i=0; i<omikujiRoulette.length; i++){
+		rouletteImages[i].classList.remove('selected');
+	}
+};
+
+// ルーレット画像が設定されている場合、visibility: hiddenで画像要素を作成しておく
+document.addEventListener('DOMContentLoaded', function() {
+    //ルーレット画像が設定されている場合
+	if(omikujiRoulette != null && Array.isArray(omikujiRoulette)){
+		for(let i=0; i<omikujiRoulette.length; i++){
+			let img_wrapper = document.getElementsByClassName('omikuji-image')[0];
+			//ルーレット画像要素の作成
+			let img = document.createElement('img');
+			img.src = `img/${omikujiRoulette[i]}`;
+			img.classList.add('image');
+			img.classList.add('image-roulette');
+
+			//ルーレット画像の親要素に画像要素を追加
+			img_wrapper.appendChild(img);
+
+		}
+
+		//グローバル変数にセットしておく
+		rouletteImages = document.getElementsByClassName('image-roulette');;
+
+	}
+});

@@ -105,6 +105,9 @@ let hikuOmikuji = () => {
     // ルーレットのタイマーを止める
     tomeruTimer(rouletteTimer);
 
+      //ルーレット画像を隠す
+      kakusuRoulette();
+
     // おみくじの結果を見せる
     miseruOmikujiKekka();
 
