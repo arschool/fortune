@@ -163,3 +163,30 @@
   grid-column: 2 / 3;
 }
 
+
+
+/* -------------------
+ * ルーレット画像を設定するためのスタイル
+ ------------------- */
+.omikuji-image{
+  /* 画像をabsoluteで配置するためにrelativeにしておく */
+position: relative;
+}
+
+/* absoluteで真ん中配置（画像切り替え用にz方向に重ねておく） */
+.omikuji-image>.image {
+  position: absolute;
+  left:0;
+  right:0;
+}
+
+/* デフォルトではルーレット画像非表示で、選ばれたら表示 */
+.omikuji-image>.image.image-roulette{
+  visibility: hidden;
+}
+.omikuji-image>.image.image-roulette.selected{
+  visibility: visible;
+}
+/* -------------------
+ * ルーレット画像を設定するためのスタイル ここまで
+ ------------------- */
